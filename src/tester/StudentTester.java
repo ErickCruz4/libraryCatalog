@@ -77,8 +77,8 @@ public class StudentTester {
 	}
 	@Test
 	public void testBookAvailability() {
-		boolean success = !LC.getBookAvailability(19);
-		boolean failure = LC.getBookAvailability(20);
+		boolean success = LC.getBookAvailability(19);
+		boolean failure = !LC.getBookAvailability(20);
 		assertTrue("Failed to return that book is available (id = 19) should be true "
 				+ "or failed to return that book isn;t available (id=20) should be false", success && failure);
 	}

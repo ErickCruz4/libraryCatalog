@@ -2,6 +2,8 @@ package main;
 
 import java.io.IOException;
 
+import interfaces.List;
+
 public class TestMain {
 
 	/*
@@ -12,8 +14,9 @@ public class TestMain {
 		// TODO Auto-generated method stub
 		try {
 			LibraryCatalog lc = new LibraryCatalog();
-				
 			lc.generateReport();
+			
+			
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
