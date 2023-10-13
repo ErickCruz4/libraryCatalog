@@ -270,7 +270,7 @@ public class LibraryCatalog{
 		output += "Classics\t\t\t\t\t" + countCl + "\n";
 		output += "Mystery\t\t\t\t\t\t" + countMys + "\n";
 		output += "Science Fiction\t\t\t\t\t" + countSF + "\n";
-		output += "========================================================\n";
+		output += "====================================================\n";
 		output += "\t\t\tTOTAL AMOUNT OF BOOKS\t" + libraryBooks.size() + "\n\n";
 		
 		/*
@@ -307,7 +307,7 @@ public class LibraryCatalog{
 		
 		
 		
-		output += "========================================================\n";
+		output += "====================================================\n";
 		output += "\t\t\tTOTAL AMOUNT OF BOOKS\t" + counter  + "\n\n";
 		
 		
@@ -356,7 +356,7 @@ public class LibraryCatalog{
 		}
 		 // Format the totalDue to two decimal places
 		String formattedTotalDue = String.format("%.2f", totalDue);
-		output += "========================================================\n";
+		output += "====================================================\n";
 		output += "\t\t\t\tTOTAL DUE\t$" +  formattedTotalDue + "\n\n\n";
 		output += "\n\n";
 		System.out.println(output);// You can use this for testing to see if the report is as expected.
@@ -368,8 +368,30 @@ public class LibraryCatalog{
 		 * 
 		 * PLACE CODE HERE!!
 		 */
+	
+	
+	/*
+	 * THIS IS THE REPORT WRITER 
+	 */
+	try {
+		String pathN = "report.txt";
+		File reportF = new File("./report/"+pathN);
 		
+		//Use this below instead of a reader to actually write the file
+		FileWriter fileWriter = new FileWriter(reportF);
+		BufferedWriter bufferedReportWriter = new BufferedWriter(fileWriter);
+		//This writes the report on the text file
+		bufferedReportWriter.write(output);
+		//Closes the writer to avoid errors
+		bufferedReportWriter.close();
+		
+		
+	
+	}catch (IOException e) {
+    e.printStackTrace();
+}
 	}
+
 	
 	/*
 	 * BONUS Methods
@@ -408,6 +430,22 @@ public class LibraryCatalog{
 	        }
 	        return filteredUsers;
 	    }
-	}
+	
+		
+	 
+	
+	    }
+	 
+
+
+	        
+	         
+	       
+	    
+	
+
+
+
+
 	
 
